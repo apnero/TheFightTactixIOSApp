@@ -41,33 +41,6 @@
             </objects>
             <point key="canvasLocation" x="-2193" y="237"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="crg-pw-NmX">
-            <objects>
-                <viewController id="y3I-EF-Pof" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3At-bd-hbv"/>
-                        <viewControllerLayoutGuide type="bottom" id="ITx-Jh-bT0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XXw-ea-ydb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0r-gz-GhR">
-                                <rect key="frame" x="261" y="253" width="52" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="0ta-g8-VF9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1WR-nu-z5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-547" y="126"/>
-        </scene>
         <!--Fight Tactix-->
         <scene sceneID="gnp-5F-x6g">
             <objects>
@@ -81,11 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="6fh-n3-zLt"/>
-                    <navigationItem key="navigationItem" title="Fight Tactix" prompt="pr" id="vlP-6S-ubV">
-                        <barButtonItem key="backBarButtonItem" title="ba" id="CUr-E7-1kV"/>
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="TyC-5O-B6Y"/>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Home" id="6fh-n3-zLt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coj-GT-IkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,12 +72,41 @@
                     </tabBar>
                     <connections>
                         <segue destination="qtP-le-pm6" kind="relationship" relationship="viewControllers" id="jrX-yM-4Rm"/>
-                        <segue destination="y3I-EF-Pof" kind="relationship" relationship="viewControllers" id="fAh-FL-gxk"/>
+                        <segue destination="2Pk-5v-s11" kind="relationship" relationship="viewControllers" id="2aA-m9-KP3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRd-g6-hF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1419" y="214"/>
+            <point key="canvasLocation" x="-1371" y="96"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="rss-ID-VyX">
+            <objects>
+                <tableViewController title="Schedule" id="2Pk-5v-s11" customClass="ScheduleViewController" customModule="FightTactix" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yOU-LO-vyq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetingCell" id="bc4-nz-j0c">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bc4-nz-j0c" id="LTn-ir-czu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Pk-5v-s11" id="1gD-Av-pGc"/>
+                            <outlet property="delegate" destination="2Pk-5v-s11" id="LB5-8x-se0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="GnS-yQ-Hwk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nn0-ii-wID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="174"/>
         </scene>
         <!--ViewController 2-->
         <scene sceneID="yzr-Fe-8RY">

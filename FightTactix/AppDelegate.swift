@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Parse.setApplicationId("A7hkeyC96XycUj3dPqplGO5ltPYyu1PXT39O663R", clientKey:"ZsKBS95aegUHNght50r8INIiAro0Siyw6diLDXba")
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-        
+        CloudQueries.currentSchedule()
         
         return true
     }
