@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BBF9CD190382F52C5D524D1 /* Pods_FightTactix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B41724AC3D542DA7A81BE3 /* Pods_FightTactix.framework */; };
+		FAE597E71C100D930076062A /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597E61C100D930076062A /* MyNavigationController.swift */; };
+		FAE597E91C100DD80076062A /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */; };
+		FAE597EB1C100E1E0076062A /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597EA1C100E1E0076062A /* MainScreenController.swift */; };
 		FAEC24B71C0E78ED0062CD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC24B61C0E78ED0062CD2D /* AppDelegate.swift */; };
 		FAEC24B91C0E78ED0062CD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC24B81C0E78ED0062CD2D /* ViewController.swift */; };
 		FAEC24BC1C0E78ED0062CD2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC24BA1C0E78ED0062CD2D /* Main.storyboard */; };
 		FAEC24BE1C0E78ED0062CD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC24BD1C0E78ED0062CD2D /* Assets.xcassets */; };
 		FAEC24C11C0E78ED0062CD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC24BF1C0E78ED0062CD2D /* LaunchScreen.storyboard */; };
+		FAEC24C91C0E79030062CD2D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FAEC24C81C0E79030062CD2D /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5949E001C0AFB0C9312BA148 /* Pods-FightTactix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightTactix.release.xcconfig"; path = "Pods/Target Support Files/Pods-FightTactix/Pods-FightTactix.release.xcconfig"; sourceTree = "<group>"; };
+		E2C26D0C3A9A3EC09557DF67 /* Pods-FightTactix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightTactix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FightTactix/Pods-FightTactix.debug.xcconfig"; sourceTree = "<group>"; };
+		E6B41724AC3D542DA7A81BE3 /* Pods_FightTactix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightTactix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE597E61C100D930076062A /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
+		FAE597EA1C100E1E0076062A /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
 		FAEC24B31C0E78ED0062CD2D /* FightTactix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightTactix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC24B61C0E78ED0062CD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEC24B81C0E78ED0062CD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,7 @@
 		FAEC24BD1C0E78ED0062CD2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEC24C01C0E78ED0062CD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAEC24C21C0E78ED0062CD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEC24C81C0E79030062CD2D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBF9CD190382F52C5D524D1 /* Pods_FightTactix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68AC8C91CF2F4B664A2140FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2C26D0C3A9A3EC09557DF67 /* Pods-FightTactix.debug.xcconfig */,
+				5949E001C0AFB0C9312BA148 /* Pods-FightTactix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EFDFD4613A6FA54673B835CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6B41724AC3D542DA7A81BE3 /* Pods_FightTactix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAEC24AA1C0E78ED0062CD2D = {
 			isa = PBXGroup;
 			children = (
+				FAEC24C81C0E79030062CD2D /* Podfile */,
 				FAEC24B51C0E78ED0062CD2D /* FightTactix */,
 				FAEC24B41C0E78ED0062CD2D /* Products */,
+				68AC8C91CF2F4B664A2140FA /* Pods */,
+				EFDFD4613A6FA54673B835CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +93,9 @@
 				FAEC24BD1C0E78ED0062CD2D /* Assets.xcassets */,
 				FAEC24BF1C0E78ED0062CD2D /* LaunchScreen.storyboard */,
 				FAEC24C21C0E78ED0062CD2D /* Info.plist */,
+				FAE597E61C100D930076062A /* MyNavigationController.swift */,
+				FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */,
+				FAE597EA1C100E1E0076062A /* MainScreenController.swift */,
 			);
 			path = FightTactix;
 			sourceTree = "<group>";
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEC24C51C0E78ED0062CD2D /* Build configuration list for PBXNativeTarget "FightTactix" */;
 			buildPhases = (
+				D0877A15D662A18A04D1FB3E /* Check Pods Manifest.lock */,
 				FAEC24AF1C0E78ED0062CD2D /* Sources */,
 				FAEC24B01C0E78ED0062CD2D /* Frameworks */,
 				FAEC24B11C0E78ED0062CD2D /* Resources */,
+				F53CBB72D1DFAA2262E389AC /* Embed Pods Frameworks */,
+				421A90546FBC81876ED3978F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,17 +163,69 @@
 			files = (
 				FAEC24C11C0E78ED0062CD2D /* LaunchScreen.storyboard in Resources */,
 				FAEC24BE1C0E78ED0062CD2D /* Assets.xcassets in Resources */,
+				FAEC24C91C0E79030062CD2D /* Podfile in Resources */,
 				FAEC24BC1C0E78ED0062CD2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		421A90546FBC81876ED3978F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FightTactix/Pods-FightTactix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0877A15D662A18A04D1FB3E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F53CBB72D1DFAA2262E389AC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FightTactix/Pods-FightTactix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAEC24AF1C0E78ED0062CD2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE597EB1C100E1E0076062A /* MainScreenController.swift in Sources */,
+				FAE597E91C100DD80076062A /* MyMenuTableViewController.swift in Sources */,
+				FAE597E71C100D930076062A /* MyNavigationController.swift in Sources */,
 				FAEC24B91C0E78ED0062CD2D /* ViewController.swift in Sources */,
 				FAEC24B71C0E78ED0062CD2D /* AppDelegate.swift in Sources */,
 			);
@@ -245,23 +336,30 @@
 		};
 		FAEC24C61C0E78ED0062CD2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C26D0C3A9A3EC09557DF67 /* Pods-FightTactix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FightTactix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FightTactix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FAEC24C71C0E78ED0062CD2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5949E001C0AFB0C9312BA148 /* Pods-FightTactix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FightTactix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FightTactix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 			};
 			name = Release;
 		};
@@ -284,6 +382,7 @@
 				FAEC24C71C0E78ED0062CD2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
