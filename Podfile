@@ -9,4 +9,5 @@ pod 'ParseFacebookUtilsV4'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'ENSwiftSideMenu'
+pod 'SwiftMoment'
 end

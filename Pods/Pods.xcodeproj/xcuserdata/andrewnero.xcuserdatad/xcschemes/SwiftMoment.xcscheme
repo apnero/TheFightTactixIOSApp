@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2651274171A30B29539B63EF'
-               BlueprintName = 'ParseFacebookUtilsV4'
+               BlueprintIdentifier = '23CB66F32E5867B88B3E2F50'
+               BlueprintName = 'SwiftMoment'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ParseFacebookUtilsV4.framework'>
+               BuildableName = 'SwiftMoment.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -1,15 +1,24 @@
 //
-//  MeetingModel.swift
+//  AttendanceModel.swift
 //  FightTactix
 //
-//  Created by Andrew Nero on 12/3/15.
+//  Created by Andrew Nero on 12/4/15.
 //  Copyright © 2015 Andrew Nero. All rights reserved.
 //
 
 import Foundation
 import Parse
 
-class Meeting : PFObject, PFSubclassing {
+class Attendance : PFObject, PFSubclassing {
+    
+    var username: String? {
+        get {
+            return self["username"] as? String
+        }
+        set {
+            self["username"] = newValue
+        }
+    }
     
     var location: String? {
         get {
@@ -29,17 +38,17 @@ class Meeting : PFObject, PFSubclassing {
         }
     }
     
-    var open: BooleanLiteralType? {
+    var checkedin: BooleanLiteralType? {
         get {
-            return self["open"] as? BooleanLiteralType
+            return self["checkedin"] as? BooleanLiteralType
         }
         set {
-            self["open"] = newValue
+            self["checkedin"] = newValue
         }
     }
     
     
     class func parseClassName() -> String {
-        return "Meeting"
+        return "Attendance"
     }
 }

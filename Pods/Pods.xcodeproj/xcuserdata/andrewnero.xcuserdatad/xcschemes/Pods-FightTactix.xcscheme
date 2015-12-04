@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9271230C9BA1774A5D18C65C'
+               BlueprintIdentifier = 'DA1578D756A886C22B8F1250'
                BlueprintName = 'Pods-FightTactix'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_FightTactix.framework'>

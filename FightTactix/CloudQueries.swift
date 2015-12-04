@@ -12,30 +12,38 @@ import Parse
 
 class CloudQueries {
     
-    static var vcurrentSchedule = []
+    static var vcurrentSchedule = [Meeting]()
+    static var vuserClassHistory = [Attendance]()
     
-   // func getCurrentSchedule() -> [PFObject] {
-    
- //       return vcurrentSchedule
-    
-  //  }
     
     static func currentSchedule() {
         
-        
         let params = [String: String]()
-        
+    
         PFCloud.callFunctionInBackground("currentSchedule", withParameters: params) {
             result, error in
             if( error === nil) {
-                NSLog("Rates: \(result) ")
-                self.vcurrentSchedule = result as! [PFObject]
+                NSLog("currentSch: \(result) ")
+                self.vcurrentSchedule = result as! [Meeting]
             }
             else if (error != nil) {
                 NSLog("error")
             }
-            
-            
         }
     }
+    
+    static func userClassHistory() {
+        
+        let params = [String: String]()
+        
+        PFCloud.callFunctionInBackground("userClassHistory", withParameters: params) {
+            result, error in
+            if ( error === nil) {
+                NSLog("userClassHist: \(result) ")
+                self.vuserClassHistory = result as! [Attendance]
+            }
+            else if (error != nil) {
+                NSLog("error")
+            }
+        }}
 }

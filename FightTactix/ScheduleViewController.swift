@@ -8,36 +8,59 @@
 
 import UIKit
 import ENSwiftSideMenu
+import SwiftMoment
 import Parse
 
 class ScheduleViewController: UITableViewController, ENSideMenuDelegate {
     
     
-    var currentSchedule = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
-        //self.tabBarController?.navigationItem.title = "Fight Tactix"
+        self.tabBarController?.navigationItem.title = "Schedule"
         //self.tabBarController?.navigationItem.setLeftBarButtonItem(UIBarButtonItem(title: "Menu", style: .Plain, target: self, action: "toggleSideMenu:"), animated: true)
-        
-        currentSchedule = CloudQueries.vcurrentSchedule
-        print(currentSchedule)
-        
+
         
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentSchedule.count
+        return CloudQueries.vcurrentSchedule.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MeetingCell", forIndexPath: indexPath)
-        let a = currentSchedule[indexPath.row] as! PFObject
+        let meeting = CloudQueries.vcurrentSchedule[indexPath.row]
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "EEE, MMM d hh:mm aaa"
-        cell.textLabel?.text = dateFormatter.stringFromDate(a.valueForKey("date") as! NSDate)
+        let classDate = meeting.date!
+        let endTime = moment(classDate) + 2.hours
+        cell.textLabel?.text = moment(classDate).format("EEE, MMM d") + "\n" + moment(classDate).format("hh:mm aaa") + "-" + endTime.format("hh:mm aaa")
+        
+        var soldOut = false
+        var registered = false
+        var checkedin = false
+        for attendance in CloudQueries.vuserClassHistory {
+            if attendance.date == classDate {
+                if attendance.checkedin == true {
+                    checkedin = true
+                }
+                else { registered = true}
+            }
+        }
+        
+        if checkedin {
+            cell.detailTextLabel?.text = "CHECKED IN"
+        } else if registered {
+            if (moment() + 4.hours > moment(classDate) ) {
+                cell.detailTextLabel?.text = "Registered (< 4 hours)"
+            } else { cell.detailTextLabel?.text = "Registered"}
+        } else if soldOut {
+            cell.detailTextLabel?.text = "MAX Registered"
+        } else if (meeting.open!) {
+            cell.detailTextLabel?.text = "Register"
+        } else { cell.detailTextLabel?.text = "Registration Closed"}
+        
+       
+        
         return cell
     }
     

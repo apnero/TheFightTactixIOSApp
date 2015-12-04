@@ -11,6 +11,7 @@
 		FA6221E71C113D55002A9950 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6221E61C113D55002A9950 /* ScheduleViewController.swift */; };
 		FA6221EB1C1143DF002A9950 /* CloudQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6221EA1C1143DF002A9950 /* CloudQueries.swift */; };
 		FA6221EE1C1156AA002A9950 /* MeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6221ED1C1156AA002A9950 /* MeetingModel.swift */; };
+		FA77E3651C122A8A006D237D /* AttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77E3641C122A8A006D237D /* AttendanceModel.swift */; };
 		FAE597E71C100D930076062A /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597E61C100D930076062A /* MyNavigationController.swift */; };
 		FAE597E91C100DD80076062A /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */; };
 		FAE597EB1C100E1E0076062A /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597EA1C100E1E0076062A /* MainScreenController.swift */; };
@@ -29,6 +30,7 @@
 		FA6221E61C113D55002A9950 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA6221EA1C1143DF002A9950 /* CloudQueries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudQueries.swift; sourceTree = "<group>"; };
 		FA6221ED1C1156AA002A9950 /* MeetingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingModel.swift; sourceTree = "<group>"; };
+		FA77E3641C122A8A006D237D /* AttendanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceModel.swift; sourceTree = "<group>"; };
 		FAE597E61C100D930076062A /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		FAE597EA1C100E1E0076062A /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6221ED1C1156AA002A9950 /* MeetingModel.swift */,
+				FA77E3641C122A8A006D237D /* AttendanceModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				FAE597E91C100DD80076062A /* MyMenuTableViewController.swift in Sources */,
 				FAE597E71C100D930076062A /* MyNavigationController.swift in Sources */,
 				FA6221E71C113D55002A9950 /* ScheduleViewController.swift in Sources */,
+				FA77E3651C122A8A006D237D /* AttendanceModel.swift in Sources */,
 				FAEC24B91C0E78ED0062CD2D /* ViewController.swift in Sources */,
 				FAEC24B71C0E78ED0062CD2D /* AppDelegate.swift in Sources */,
 				FA6221EB1C1143DF002A9950 /* CloudQueries.swift in Sources */,
