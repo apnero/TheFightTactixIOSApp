@@ -85,7 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FightTactix/Bolts.framework"
-  install_framework "Pods-FightTactix/ENSwiftSideMenu.framework"
+  install_framework "Pods-FightTactix/EZLoadingActivity.framework"
   install_framework "Pods-FightTactix/FBSDKCoreKit.framework"
   install_framework "Pods-FightTactix/FBSDKLoginKit.framework"
   install_framework "Pods-FightTactix/Parse.framework"
@@ -95,7 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FightTactix/Bolts.framework"
-  install_framework "Pods-FightTactix/ENSwiftSideMenu.framework"
+  install_framework "Pods-FightTactix/EZLoadingActivity.framework"
   install_framework "Pods-FightTactix/FBSDKCoreKit.framework"
   install_framework "Pods-FightTactix/FBSDKLoginKit.framework"
   install_framework "Pods-FightTactix/Parse.framework"

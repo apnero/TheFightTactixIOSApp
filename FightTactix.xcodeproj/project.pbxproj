@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5BBF9CD190382F52C5D524D1 /* Pods_FightTactix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B41724AC3D542DA7A81BE3 /* Pods_FightTactix.framework */; };
+		FA1787321C18177B00DC9520 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1787311C18177B00DC9520 /* CardViewController.swift */; };
+		FA44483F1C167D580033A70A /* NavMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44483E1C167D580033A70A /* NavMenuViewCell.swift */; };
+		FA4448411C169AC60033A70A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4448401C169AC60033A70A /* InfoViewController.swift */; };
 		FA6221E71C113D55002A9950 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6221E61C113D55002A9950 /* ScheduleViewController.swift */; };
 		FA6221EB1C1143DF002A9950 /* CloudQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6221EA1C1143DF002A9950 /* CloudQueries.swift */; };
 		FA6221EE1C1156AA002A9950 /* MeetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6221ED1C1156AA002A9950 /* MeetingModel.swift */; };
 		FA77E3651C122A8A006D237D /* AttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77E3641C122A8A006D237D /* AttendanceModel.swift */; };
+		FA77E3671C1258F0006D237D /* CardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77E3661C1258F0006D237D /* CardsModel.swift */; };
 		FAE597E71C100D930076062A /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597E61C100D930076062A /* MyNavigationController.swift */; };
 		FAE597E91C100DD80076062A /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */; };
 		FAE597EB1C100E1E0076062A /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE597EA1C100E1E0076062A /* MainScreenController.swift */; };
@@ -27,10 +31,14 @@
 		5949E001C0AFB0C9312BA148 /* Pods-FightTactix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightTactix.release.xcconfig"; path = "Pods/Target Support Files/Pods-FightTactix/Pods-FightTactix.release.xcconfig"; sourceTree = "<group>"; };
 		E2C26D0C3A9A3EC09557DF67 /* Pods-FightTactix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightTactix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FightTactix/Pods-FightTactix.debug.xcconfig"; sourceTree = "<group>"; };
 		E6B41724AC3D542DA7A81BE3 /* Pods_FightTactix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightTactix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1787311C18177B00DC9520 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		FA44483E1C167D580033A70A /* NavMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavMenuViewCell.swift; sourceTree = "<group>"; };
+		FA4448401C169AC60033A70A /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		FA6221E61C113D55002A9950 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA6221EA1C1143DF002A9950 /* CloudQueries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudQueries.swift; sourceTree = "<group>"; };
 		FA6221ED1C1156AA002A9950 /* MeetingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingModel.swift; sourceTree = "<group>"; };
 		FA77E3641C122A8A006D237D /* AttendanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceModel.swift; sourceTree = "<group>"; };
+		FA77E3661C1258F0006D237D /* CardsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsModel.swift; sourceTree = "<group>"; };
 		FAE597E61C100D930076062A /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		FAE597EA1C100E1E0076062A /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
@@ -73,6 +81,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA44483D1C167D3C0033A70A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FA44483E1C167D580033A70A /* NavMenuViewCell.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		FA6221E91C1143BB002A9950 /* Cloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +102,7 @@
 			children = (
 				FA6221ED1C1156AA002A9950 /* MeetingModel.swift */,
 				FA77E3641C122A8A006D237D /* AttendanceModel.swift */,
+				FA77E3661C1258F0006D237D /* CardsModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -112,6 +129,7 @@
 		FAEC24B51C0E78ED0062CD2D /* FightTactix */ = {
 			isa = PBXGroup;
 			children = (
+				FA44483D1C167D3C0033A70A /* Util */,
 				FA6221EC1C11568A002A9950 /* Model */,
 				FA6221E91C1143BB002A9950 /* Cloud */,
 				FAEC24B61C0E78ED0062CD2D /* AppDelegate.swift */,
@@ -124,6 +142,8 @@
 				FAE597E81C100DD80076062A /* MyMenuTableViewController.swift */,
 				FAE597EA1C100E1E0076062A /* MainScreenController.swift */,
 				FA6221E61C113D55002A9950 /* ScheduleViewController.swift */,
+				FA4448401C169AC60033A70A /* InfoViewController.swift */,
+				FA1787311C18177B00DC9520 /* CardViewController.swift */,
 			);
 			path = FightTactix;
 			sourceTree = "<group>";
@@ -256,9 +276,13 @@
 				FAE597E71C100D930076062A /* MyNavigationController.swift in Sources */,
 				FA6221E71C113D55002A9950 /* ScheduleViewController.swift in Sources */,
 				FA77E3651C122A8A006D237D /* AttendanceModel.swift in Sources */,
+				FA44483F1C167D580033A70A /* NavMenuViewCell.swift in Sources */,
+				FA77E3671C1258F0006D237D /* CardsModel.swift in Sources */,
 				FAEC24B91C0E78ED0062CD2D /* ViewController.swift in Sources */,
 				FAEC24B71C0E78ED0062CD2D /* AppDelegate.swift in Sources */,
 				FA6221EB1C1143DF002A9950 /* CloudQueries.swift in Sources */,
+				FA1787321C18177B00DC9520 /* CardViewController.swift in Sources */,
+				FA4448411C169AC60033A70A /* InfoViewController.swift in Sources */,
 				FA6221EE1C1156AA002A9950 /* MeetingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

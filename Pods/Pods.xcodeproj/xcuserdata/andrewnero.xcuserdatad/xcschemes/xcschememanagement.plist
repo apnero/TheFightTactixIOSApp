@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ENSwiftSideMenu.xcscheme</key>
+		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,11 +52,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0BA08BD346CFA88C22C67C00C91432B7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0F98F85575B93F19AE698C564B266D98</key>
 		<dict>
 			<key>primary</key>
@@ -72,17 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5A24910FCF011F8BABBE4F43971C6B31</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E40B80F0FA7BDA9FBB0AB7DDCD07249</key>
+		<key>903A108934E1A089B76F443DC34C8E54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7BBB23CDF34CA9AC02A579D39F68F2C5</key>
+		<key>9A4EE5F96618EA1447B7BFE6343391C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

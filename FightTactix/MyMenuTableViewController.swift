@@ -10,6 +10,7 @@ import UIKit
 import ENSwiftSideMenu
 
 
+
 class MyMenuTableViewController: UITableViewController {
     var selectedMenuItem : Int = 0
     override func viewDidLoad() {
@@ -20,6 +21,8 @@ class MyMenuTableViewController: UITableViewController {
         tableView.separatorStyle = .None
         tableView.backgroundColor = UIColor.clearColor()
         tableView.scrollsToTop = false
+        
+        tableView.registerClass(NavMenuViewCell.self, forCellReuseIdentifier: NSStringFromClass(NavMenuViewCell))
         
         // Preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
@@ -41,23 +44,46 @@ class MyMenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 4
+        return 3
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("CELL")
         
-        if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
-            cell!.backgroundColor = UIColor.clearColor()
-            cell!.textLabel?.textColor = UIColor.darkGrayColor()
-            let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
-            selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
-            cell!.selectedBackgroundView = selectedBackgroundView
+        let cell = tableView.dequeueReusableCellWithIdentifier( NSStringFromClass(NavMenuViewCell), forIndexPath: indexPath) as? NavMenuViewCell
+        
+ 
+        //var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as MyTableViewCell
+        
+        //if (cell == nil) {
+            //cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
+          //  cell!.backgroundColor = UIColor.clearColor()
+            //cell!.textLabel?.textColor = UIColor.darkGrayColor()
+            //let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
+            //selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
+            //cell!.selectedBackgroundView = selectedBackgroundView
+        //}
+        
+        if indexPath.row == 0 {
+            cell!.menuLabel?.text = "Home"
+        }
+        else if indexPath.row == 1 {
+            cell!.menuLabel?.text = "Credit History"
+            print ("la")
+            print(CloudQueries.vuserClassHistory.count)
+            cell!.creditLabel?.text = "\(CloudQueries.vuserPunchCards.count)"
+        }
+        else {
+            cell!.menuLabel?.text = "Class History"
+            cell!.creditLabel?.text = "\(CloudQueries.vuserClassHistory.count)"
         }
         
-        cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
+        
+        
+        
+        
+        
+
         
         return cell!
     }
@@ -84,7 +110,7 @@ class MyMenuTableViewController: UITableViewController {
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1")
             break
         case 1:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController2")
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("CardHistory")
             break
         case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController3")
@@ -96,6 +122,10 @@ class MyMenuTableViewController: UITableViewController {
         
         sideMenuController()?.setContentViewController(destViewController)
     }
+   
+    
+    
+       
     
     
     /*

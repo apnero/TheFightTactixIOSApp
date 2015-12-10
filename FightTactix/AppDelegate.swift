@@ -23,11 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("A7hkeyC96XycUj3dPqplGO5ltPYyu1PXT39O663R", clientKey:"ZsKBS95aegUHNght50r8INIiAro0Siyw6diLDXba")
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
+        
         Meeting.registerSubclass()
         Attendance.registerSubclass()
-        
-        CloudQueries.currentSchedule()
-        CloudQueries.userClassHistory()
+        Cards.registerSubclass()
+
         
         return true
     }

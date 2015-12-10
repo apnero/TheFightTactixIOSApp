@@ -5,7 +5,7 @@ PODS:
   - Bolts/AppLinks (1.5.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.5.0)
-  - ENSwiftSideMenu (0.0.9)
+  - EZLoadingActivity (0.4)
   - FBSDKCoreKit (4.8.0):
     - Bolts (~> 1.1)
     - FBSDKCoreKit/arc (= 4.8.0)
@@ -30,7 +30,7 @@ PODS:
   - SwiftMoment (0.2)
 
 DEPENDENCIES:
-  - ENSwiftSideMenu
+  - EZLoadingActivity
   - FBSDKCoreKit
   - FBSDKLoginKit
   - Parse
@@ -40,7 +40,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
-  ENSwiftSideMenu: e2232c78b76c798455134e399c84cd6642bc09c0
+  EZLoadingActivity: d6fe822f4b295349dd44e6e5d7f22d7c1a2b13cc
   FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   Parse: 90b2544822200f84b18bfacc4e8b0a3a6c3584a2

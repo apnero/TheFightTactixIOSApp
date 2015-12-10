@@ -38,12 +38,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     func presentMainMenu() {
-        //let alertController = UIAlertController(title: "You're logged in", message: "Welcome to Vay.K", preferredStyle: .Alert)
-        //let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-        //    self.dismissViewControllerAnimated(true, completion: nil)
-        //}
-        //alertController.addAction(OKAction)
-        //self.presentViewController(alertController, animated: true, completion: nil)
+
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
         let destViewController : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainViewController")

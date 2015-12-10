@@ -8,6 +8,6 @@ pod 'ParseUI'
 pod 'ParseFacebookUtilsV4'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
-pod 'ENSwiftSideMenu'
 pod 'SwiftMoment'
+pod 'EZLoadingActivity'
 end
