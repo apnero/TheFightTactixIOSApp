@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '62E725173A58B45BA31A7169'
-               BlueprintName = 'ParseUI'
+               BlueprintIdentifier = 'C053214BB4F632FFD2CE1AAC'
+               BlueprintName = 'MZTimerLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ParseUI.framework'>
+               BuildableName = 'MZTimerLabel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

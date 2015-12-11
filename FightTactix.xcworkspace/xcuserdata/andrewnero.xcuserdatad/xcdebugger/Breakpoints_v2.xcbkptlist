@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/MainScreenController.swift"
-            timestampString = "471422916.357511"
+            timestampString = "471491062.690862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "MainScreenController"
             landmarkType = "3">
             <Locations>
@@ -456,11 +456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/MainScreenController.swift"
-            timestampString = "471424035.675722"
+            timestampString = "471491062.690862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -488,12 +488,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/MainScreenController.swift"
-            timestampString = "471424035.675722"
+            timestampString = "471493278.484379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "loaded()"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "timerLabel(_:countingTo:timertype:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

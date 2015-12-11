@@ -8,8 +8,10 @@
 
 import UIKit
 import EZLoadingActivity
+import SwiftMoment
+import MZTimerLabel
 
-class MainScreenController: UIViewController {
+class MainScreenController: UIViewController, MZTimerLabelDelegate {
     
     
     @IBOutlet weak var textChris: UIButton!
@@ -17,12 +19,18 @@ class MainScreenController: UIViewController {
     @IBOutlet weak var creditsRemaining: UILabel!
     @IBOutlet weak var creditsPurchased: UILabel!
     @IBOutlet weak var classesAttended: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var checkin: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
                
         textChris.addTarget(self, action: "text:", forControlEvents: .TouchUpInside)
         purchaseCard.addTarget(self, action: "purchase:", forControlEvents: .TouchUpInside)
+ 
         
     }
     
@@ -50,7 +58,25 @@ class MainScreenController: UIViewController {
         classesAttended.text = "\(CloudQueries.vuserClassHistory.count)"
         creditsPurchased.text = "\(sum)"
         creditsRemaining.text = "\(remaining)"
+        
+        for session in CloudQueries.vuserClassHistory {
+            if moment(session.date!) < moment()  {
+                date.text = moment(session.date!).format("EEE, MMM d hh:mm aaa")
+                let mycountdownTimer = MZTimerLabel(label: timer, andTimerType: MZTimerLabelTypeTimer)
+                mycountdownTimer.setCountDownTime(30)
+                mycountdownTimer.delegate = self
+                mycountdownTimer.start()
+                break
+            }
+            
+        }
     }
+    func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
+        if time < 10 {
+            timer.textColor = UIColor.redColor()
+        }
+    }
+
     
     
     override func didReceiveMemoryWarning() {

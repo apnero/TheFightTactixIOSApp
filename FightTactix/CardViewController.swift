@@ -7,19 +7,40 @@
 //
 
 import UIKit
+import SwiftMoment
+import Parse
+
+class CardCell : UITableViewCell {
+    
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var credits: UILabel!
+    
+    func set(row: Int) {
+        let card = CloudQueries.vuserPunchCards[row]
+        
+        let cardDate = card.date!
+        date.text = moment(cardDate).format("EEE, MMM d")
+        credits.text = "\(card.credits!)"
+        //credits.backgroundColor = UIColor.blueColor()
+        //credits.textColor = UIColor.whiteColor()
+        //credits.layer.cornerRadius = 5
+        credits.clipsToBounds = true
+    }
+    
+}
+
+
+
+
 
 class CardViewController: UITableViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        tableView.tableHeaderView = UIView()
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,9 +48,9 @@ class CardViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CardCell", forIndexPath: indexPath)
-        let card = CloudQueries.vuserPunchCards[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("cardCell", forIndexPath: indexPath) as! CardCell
         
+        cell.set(indexPath.row)
         
         
         return cell
