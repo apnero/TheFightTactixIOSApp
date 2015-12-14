@@ -10,5 +10,4 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'SwiftMoment'
 pod 'EZLoadingActivity'
-pod 'MZTimerLabel'
 end

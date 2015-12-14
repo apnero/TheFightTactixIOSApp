@@ -9,9 +9,8 @@
 import UIKit
 import EZLoadingActivity
 import SwiftMoment
-import MZTimerLabel
 
-class MainScreenController: UIViewController, MZTimerLabelDelegate {
+class MainScreenController: UIViewController {
     
     
     @IBOutlet weak var textChris: UIButton!
@@ -20,21 +19,23 @@ class MainScreenController: UIViewController, MZTimerLabelDelegate {
     @IBOutlet weak var creditsPurchased: UILabel!
     @IBOutlet weak var classesAttended: UILabel!
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var timer: UILabel!
     @IBOutlet weak var checkin: UIButton!
     
-    
-    
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
                
         textChris.addTarget(self, action: "text:", forControlEvents: .TouchUpInside)
         purchaseCard.addTarget(self, action: "purchase:", forControlEvents: .TouchUpInside)
- 
         
+
+        
+    
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         EZLoadingActivity.show("Loading...", disableUI: true)
         
@@ -48,6 +49,7 @@ class MainScreenController: UIViewController, MZTimerLabelDelegate {
     func loaded() {
         EZLoadingActivity.hide(success: true, animated: true)
         
+    
         var sum = 0
         for card in CloudQueries.vuserPunchCards {
             sum += card.credits!
@@ -60,22 +62,21 @@ class MainScreenController: UIViewController, MZTimerLabelDelegate {
         creditsRemaining.text = "\(remaining)"
         
         for session in CloudQueries.vuserClassHistory {
-            if moment(session.date!) < moment()  {
+            if moment(session.date!) > moment()  {
                 date.text = moment(session.date!).format("EEE, MMM d hh:mm aaa")
-                let mycountdownTimer = MZTimerLabel(label: timer, andTimerType: MZTimerLabelTypeTimer)
-                mycountdownTimer.setCountDownTime(30)
-                mycountdownTimer.delegate = self
-                mycountdownTimer.start()
+                
+                if moment(session.date!) < moment() + 1.hours {
+                    checkin.enabled = true
+                    checkin.setTitle("Check In", forState: .Normal)
+                }
+                
                 break
             }
             
         }
     }
-    func timerLabel(timerLabel: MZTimerLabel!, countingTo time: NSTimeInterval, timertype timerType: MZTimerLabelType) {
-        if time < 10 {
-            timer.textColor = UIColor.redColor()
-        }
-    }
+    
+
 
     
     

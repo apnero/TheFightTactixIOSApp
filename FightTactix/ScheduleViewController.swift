@@ -12,10 +12,10 @@ import Parse
 
 class MeetingCell : UITableViewCell {
     
-    
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var status: UILabel!
+    
     
     func set(row: Int) {
         let meeting = CloudQueries.vcurrentSchedule[row]
@@ -37,14 +37,28 @@ class MeetingCell : UITableViewCell {
             }
         }
         
+        for session in CloudQueries.vcurrentEnrolled {
+            if meeting.objectId == session.meetingId {
+                if session.number >= CloudQueries.vmaxClassSize {
+                    soldOut = true
+                }
+            }
+        }
+        
+        
         if checkedin {
-            status?.text = "CHECKED IN"
+            status?.text = "Checked-In"
+            status?.textColor = UIColor.magentaColor()
         } else if registered {
             if (moment() + 4.hours > moment(classDate) ) {
                 status?.text = "Registered (< 4 hours)"
-            } else { status?.text = "Registered"}
+                status?.textColor = UIColor.blueColor()
+            } else {
+                status?.text = "Registered"
+                status?.textColor = UIColor.blueColor()}
         } else if soldOut {
             status?.text = "MAX Registered"
+            status?.textColor = UIColor.redColor()
         } else if (meeting.open!) {
             status?.text = "Register"
         } else { status?.text = "Registration Closed"}
@@ -77,10 +91,28 @@ class ScheduleViewController: UITableViewController {
    
         cell.set(indexPath.row)
         
-        
         return cell
     }
     
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! MeetingCell
+    
+        var params = [String:NSDate]()
+        params["date"] = CloudQueries.vcurrentSchedule[indexPath.row].date
+        
+        if cell.status.text == "Register" {
+            CloudCalls.registerForClass(params)
+            cell.status.text  = "Registered"
+            cell.status.textColor = UIColor.blueColor()
+        }
+        else if cell.status.text == "Registered" {
+            CloudCalls.unRegisterForClass(params)
+            cell.status.text = "Register"
+            cell.status.textColor = UIColor.blackColor()
+        }
+    }
+    
+    
 }
 

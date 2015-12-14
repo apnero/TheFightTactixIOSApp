@@ -21,6 +21,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             loginViewController.fields = [.UsernameAndPassword, .LogInButton, .PasswordForgotten, .SignUpButton, .Facebook]
             loginViewController.emailAsUsername = true
             loginViewController.signUpController?.delegate = self
+            
+            let logoImage = UIImageView()
+            logoImage.image = UIImage(named: "tactix_name")
+            logoImage.contentMode = UIViewContentMode.ScaleAspectFit
+            loginViewController.logInView?.logo = logoImage
+            loginViewController.logInView?.backgroundColor = UIColor.blackColor()
+            
             self.presentViewController(loginViewController, animated: false, completion: nil)
         } else {
             presentMainMenu()

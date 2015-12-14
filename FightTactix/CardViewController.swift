@@ -21,16 +21,11 @@ class CardCell : UITableViewCell {
         let cardDate = card.date!
         date.text = moment(cardDate).format("EEE, MMM d")
         credits.text = "\(card.credits!)"
-        //credits.backgroundColor = UIColor.blueColor()
-        //credits.textColor = UIColor.whiteColor()
-        //credits.layer.cornerRadius = 5
+
         credits.clipsToBounds = true
     }
     
 }
-
-
-
 
 
 class CardViewController: UITableViewController {
