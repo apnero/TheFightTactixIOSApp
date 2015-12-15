@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://drive.google.com/open?id=0BwWTHWhebLuuTUhNckd1YkVxaE0</string>
+					<string>https://raw.githubusercontent.com/apnero/TheFightTactixIOSApp/master/FightTactix.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://drive.google.com/open?id=0BwWTHWhebLuuc0R2UzEzSVVFQjA</string>
+					<string>https://raw.githubusercontent.com/apnero/TheFightTactixIOSApp/master/tactix57x57.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>https://drive.google.com/open?id=0BwWTHWhebLuuZWI4d0tDQ2ZwajA</string>
+					<string>https://raw.githubusercontent.com/apnero/TheFightTactixIOSApp/master/tactix512x512.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
