@@ -187,6 +187,11 @@
 					FAEC24B21C0E78ED0062CD2D = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = F8WV43V82N;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -401,7 +406,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2C26D0C3A9A3EC09557DF67 /* Pods-FightTactix.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -421,7 +426,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5949E001C0AFB0C9312BA148 /* Pods-FightTactix.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
