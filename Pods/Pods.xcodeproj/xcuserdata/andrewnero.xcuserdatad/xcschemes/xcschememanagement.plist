@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MZTimerLabel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,11 +57,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>502A2321E0B3390B37A872700DA0EAB3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>511B536F0DE06D9C3BD65397A91990C0</key>
 		<dict>
 			<key>primary</key>
@@ -77,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
+		<key>5A24910FCF011F8BABBE4F43971C6B31</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F4334504B31DB1DCFA1B3919AF9C17F</key>
+		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E29A23890B992C6D47D51882C1B22A6</key>
+		<key>9A4EE5F96618EA1447B7BFE6343391C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
