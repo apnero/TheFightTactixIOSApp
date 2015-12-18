@@ -19,8 +19,6 @@ class MainScreenController: UIViewController {
     @IBOutlet weak var creditsPurchased: UILabel!
     @IBOutlet weak var classesAttended: UILabel!
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var checkin: UIButton!
-    
 
    
     override func viewDidLoad() {
@@ -60,20 +58,8 @@ class MainScreenController: UIViewController {
         classesAttended.text = "\(CloudQueries.vuserClassHistory.count)"
         creditsPurchased.text = "\(sum)"
         creditsRemaining.text = "\(remaining)"
+
         
-        for session in CloudQueries.vuserClassHistory {
-            if moment(session.date!) > moment()  {
-                date.text = moment(session.date!).format("EEE, MMM d hh:mm aaa")
-                
-                if moment(session.date!) < moment() + 1.hours {
-                    checkin.enabled = true
-                    checkin.setTitle("Check In", forState: .Normal)
-                }
-                
-                break
-            }
-            
-        }
     }
     
 

@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "shield_icon120x120-3.png",
       "scale" : "1x"
     },
     {
@@ -38,18 +39,6 @@
       "idiom" : "ipad",
       "filename" : "shield_icon120x120-1.png",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "shield_icon120x120-3.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "shield_icon120x120.png",
-      "unassigned" : true,
-      "scale" : "1x"
     }
   ],
   "info" : {

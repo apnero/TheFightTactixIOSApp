@@ -92,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FightTactix/ParseFacebookUtilsV4.framework"
   install_framework "Pods-FightTactix/ParseUI.framework"
   install_framework "Pods-FightTactix/SwiftMoment.framework"
+  install_framework "Pods-FightTactix/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FightTactix/Bolts.framework"
@@ -102,4 +103,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FightTactix/ParseFacebookUtilsV4.framework"
   install_framework "Pods-FightTactix/ParseUI.framework"
   install_framework "Pods-FightTactix/SwiftMoment.framework"
+  install_framework "Pods-FightTactix/SwiftyJSON.framework"
 fi
