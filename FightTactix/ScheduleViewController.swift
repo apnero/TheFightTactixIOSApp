@@ -1,118 +1,99 @@
-//
-//  ScheduleViewController.swift
-//  FightTactix
-//
-//  Created by Andrew Nero on 12/3/15.
-//  Copyright © 2015 Andrew Nero. All rights reserved.
-//
-
 import UIKit
-import SwiftMoment
-import Parse
+import IOStickyHeader
 
-class MeetingCell : UITableViewCell {
+class ScheduleViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var status: UILabel!
-    
-    
-    func set(row: Int) {
-        let meeting = CloudQueries.vcurrentSchedule[row]
-        
-        let classDate = meeting.date!
-        let endTime = moment(classDate) + 2.hours
-        date.text = moment(classDate).format("EEE, MMM d")
-        time.text = moment(classDate).format("hh:mm aaa") + "-" + endTime.format("hh:mm aaa")
-        
-        var soldOut = false
-        var registered = false
-        var checkedin = false
-        for attendance in CloudQueries.vuserClassHistory {
-            if attendance.date == classDate {
-                if attendance.checkedin == true {
-                    checkedin = true
-                }
-                else { registered = true}
-            }
-        }
-        
-        for session in CloudQueries.vcurrentEnrolled {
-            if meeting.objectId == session.meetingId {
-                if session.number >= CloudQueries.vmaxClassSize {
-                    soldOut = true
-                }
-            }
-        }
-        
-        
-        if checkedin {
-            status?.text = "Checked-In"
-            status?.textColor = UIColor.magentaColor()
-        } else if registered {
-            if (moment() + 4.hours > moment(classDate) ) {
-                status?.text = "Registered (< 4 hours)"
-                status?.textColor = UIColor.blueColor()
-            } else {
-                status?.text = "Registered"
-                status?.textColor = UIColor.blueColor()}
-        } else if soldOut {
-            status?.text = "MAX Registered"
-            status?.textColor = UIColor.redColor()
-        } else if (meeting.open!) {
-            status?.text = "Register"
-        } else { status?.text = "Registration Closed"}
-        
-        
-    }
-    
-}
-
-
-
-
-
-class ScheduleViewController: UITableViewController {
-    
-   
+    @IBOutlet weak var collectionView: UICollectionView!
+    let headerNib = UINib(nibName: "IOParallaxHeader", bundle: NSBundle.mainBundle())
+    var section: Array<String> = []
+    let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableHeaderView = UIView()
         
+        self.section = [
+            "City 1",
+            "City 2",
+
+        ]
+        
+        collectionView.backgroundColor = UIColor.whiteColor()
+        gradientLayer.frame = CGRectMake(0,150, collectionView.bounds.size.width, collectionView.bounds.size.height)// collectionView.bounds
+        
+        let color1 = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8).CGColor as CGColorRef
+        let color2 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.2).CGColor as CGColorRef
+        gradientLayer.colors = [color1, color2, color1]
+        gradientLayer.locations = [0.2, 0.4, 0.6]
+        gradientLayer.opacity = 0.5
+        
+        gradientLayer.startPoint = CGPointMake(0.0,0.0)
+        gradientLayer.endPoint = CGPointMake(1.0,1.0)
+        collectionView.layer.addSublayer(gradientLayer)
+        
+        self.setupCollectionView()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CloudQueries.vcurrentSchedule.count
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("meetingCell", forIndexPath: indexPath) as! MeetingCell
-   
+    func setupCollectionView() {
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        
+        if let layout: IOStickyHeaderFlowLayout = self.collectionView.collectionViewLayout as? IOStickyHeaderFlowLayout {
+            layout.parallaxHeaderReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.size.width, 150)
+            layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(UIScreen.mainScreen().bounds.size.width, 0)
+            layout.itemSize = CGSizeMake(UIScreen.mainScreen().bounds.size.width, layout.itemSize.height)
+            layout.parallaxHeaderAlwaysOnTop = true
+            layout.disableStickyHeaders = true
+            self.collectionView.collectionViewLayout = layout
+        }
+        
+        self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0)
+        
+        self.collectionView.registerNib(self.headerNib, forSupplementaryViewOfKind: IOStickyHeaderParallaxHeader, withReuseIdentifier: "header")
+    }
+    
+
+    
+    //MARK: UICollectionViewDataSource & UICollectionViewDelegate
+    
+//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//        return self.section.count
+//    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return CloudQueries.vuserClassHistory.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell: HistoryCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! HistoryCell
+        
         cell.set(indexPath.row)
+        //let obj = self.section[indexPath.section][indexPath.row]
+        
+        //cell.lblTitle.text = obj
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! MeetingCell
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(UIScreen.mainScreen().bounds.size.width, 50);
+    }
     
-        var params = [String:NSDate]()
-        params["date"] = CloudQueries.vcurrentSchedule[indexPath.row].date
-        
-        if cell.status.text == "Register" {
-            CloudCalls.registerForClass(params)
-            cell.status.text  = "Registered"
-            cell.status.textColor = UIColor.blueColor()
-        }
-        else if cell.status.text == "Registered" {
-            CloudCalls.unRegisterForClass(params)
-            cell.status.text = "Register"
-            cell.status.textColor = UIColor.blackColor()
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        switch kind {
+//        case IOStickyHeaderParallaxHeader:
+//            let cell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as! IOGrowHeader
+//            return cell
+        case IOStickyHeaderParallaxHeader:
+            let cell = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as! IOParallaxHeader
+            return cell
+        default:
+            assert(false, "Unexpected element kind")
         }
     }
     
-    
 }
-

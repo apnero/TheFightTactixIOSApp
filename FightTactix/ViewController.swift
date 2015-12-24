@@ -46,7 +46,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         self.dismissViewControllerAnimated(true, completion: nil)
-        presentMainMenu()
+        //presentMainMenu()
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
@@ -79,7 +79,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     func makeGraphRequest() {
-        //let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+        
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: [ "fields" : "email, name, gender" ])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             if error != nil {
@@ -87,19 +87,25 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
             else {
                 var dic = [String:String]()
-                dic["facebookId"] = result.valueForKey("id") as! String?
-                dic["name"] = result.valueForKey("name") as! String?
-                dic["email"] = result.valueForKey("email") as! String?
-                let userProfile:JSON = JSON(dic)
                 
-                PFUser.currentUser()?.setObject(userProfile.rawValue, forKey: "profile")
+                if result.valueForKey("id") != nil {
+                    dic["facebookId"] = result.valueForKey("id") as! String?
+                }
                 
                 if result.valueForKey("name") != nil {
                     PFUser.currentUser()?.setObject(result.valueForKey("name") as! String!, forKey: "name")
+                    dic["name"] = result.valueForKey("name") as! String?
                 }
+                
                 if result.valueForKey("email") != nil {
                     PFUser.currentUser()?.setObject(result.valueForKey("email") as! String!, forKey:  "email")
+                    dic["email"] = result.valueForKey("email") as! String?
                 }
+                
+                
+                let userProfile:JSON = JSON(dic)
+                
+                PFUser.currentUser()?.setObject(userProfile.rawValue, forKey: "profile")
                 PFUser.currentUser()?.saveInBackground()
                 print("Result: \(result)")
             }
@@ -113,7 +119,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
         
         //if PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()!) && PFUser.currentUser()?.objectForKey("profile") == nil {
-        makeGraphRequest()
+            makeGraphRequest()
         //}
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)

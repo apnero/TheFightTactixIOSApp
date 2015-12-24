@@ -20,10 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Parse.setApplicationId("A7hkeyC96XycUj3dPqplGO5ltPYyu1PXT39O663R", clientKey:"ZsKBS95aegUHNght50r8INIiAro0Siyw6diLDXba")
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId(valueForAPIId("API_CLIENT_ID"), clientKey: valueForAPIKey("API_CLIENT_KEY"))
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-        PFInstallation.currentInstallation().saveInBackground()
-        
         
         Meeting.registerSubclass()
         Attendance.registerSubclass()
@@ -41,6 +40,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKAppEvents.activateApp()
     }
     
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        print("didRegisterForRemoteNotificationsWithDeviceToken")
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.saveInBackgroundWithBlock { (succeeded, e) -> Void in
+            //code
+        }
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("failed to register for remote notifications:  (error)")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print("didReceiveRemoteNotification")
+        PFPush.handlePush(userInfo)
+    }
 }
 
 

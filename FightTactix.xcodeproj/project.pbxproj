@@ -11,7 +11,17 @@
 		FA043BF21C1A6F8500BFB170 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA043BF11C1A6F8500BFB170 /* HistoryViewController.swift */; };
 		FA043BF41C1A853D00BFB170 /* CloudCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA043BF31C1A853D00BFB170 /* CloudCalls.swift */; };
 		FA043BF61C1A8AC000BFB170 /* CurrentAttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA043BF51C1A8AC000BFB170 /* CurrentAttendanceModel.swift */; };
+		FA0DBFF41C2B5794006B44E0 /* IOGrowHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DBFF31C2B5794006B44E0 /* IOGrowHeader.swift */; };
+		FA0DBFF81C2B5825006B44E0 /* IOGrowHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0DBFF71C2B5825006B44E0 /* IOGrowHeader.xib */; };
+		FA0DBFFA1C2B5897006B44E0 /* IOCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DBFF91C2B5897006B44E0 /* IOCell.swift */; };
+		FA0DBFFC1C2B58A1006B44E0 /* IOSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DBFFB1C2B58A1006B44E0 /* IOSectionHeader.swift */; };
+		FA0DBFFF1C2B5A70006B44E0 /* IOParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DBFFD1C2B5A70006B44E0 /* IOParallaxHeader.swift */; };
+		FA0DC0001C2B5A70006B44E0 /* IOParallaxHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0DBFFE1C2B5A70006B44E0 /* IOParallaxHeader.xib */; };
+		FA0DC0021C2B5DB2006B44E0 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DC0011C2B5DB2006B44E0 /* MeetingCell.swift */; };
+		FA0DC0041C2B5DF1006B44E0 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DC0031C2B5DF1006B44E0 /* HistoryCell.swift */; };
 		FA1787321C18177B00DC9520 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1787311C18177B00DC9520 /* CardViewController.swift */; };
+		FA356BD81C2913D500235470 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA356BD71C2913D500235470 /* ApiKeys.plist */; };
+		FA356BDA1C2914CA00235470 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA356BD91C2914CA00235470 /* ApiKeys.swift */; };
 		FA44483F1C167D580033A70A /* NavMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44483E1C167D580033A70A /* NavMenuViewCell.swift */; };
 		FA4448411C169AC60033A70A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4448401C169AC60033A70A /* InfoViewController.swift */; };
 		FA6221E71C113D55002A9950 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6221E61C113D55002A9950 /* ScheduleViewController.swift */; };
@@ -35,7 +45,17 @@
 		FA043BF11C1A6F8500BFB170 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		FA043BF31C1A853D00BFB170 /* CloudCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudCalls.swift; sourceTree = "<group>"; };
 		FA043BF51C1A8AC000BFB170 /* CurrentAttendanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentAttendanceModel.swift; sourceTree = "<group>"; };
+		FA0DBFF31C2B5794006B44E0 /* IOGrowHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOGrowHeader.swift; sourceTree = "<group>"; };
+		FA0DBFF71C2B5825006B44E0 /* IOGrowHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IOGrowHeader.xib; sourceTree = "<group>"; };
+		FA0DBFF91C2B5897006B44E0 /* IOCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOCell.swift; sourceTree = "<group>"; };
+		FA0DBFFB1C2B58A1006B44E0 /* IOSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSectionHeader.swift; sourceTree = "<group>"; };
+		FA0DBFFD1C2B5A70006B44E0 /* IOParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOParallaxHeader.swift; sourceTree = "<group>"; };
+		FA0DBFFE1C2B5A70006B44E0 /* IOParallaxHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IOParallaxHeader.xib; sourceTree = "<group>"; };
+		FA0DC0011C2B5DB2006B44E0 /* MeetingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
+		FA0DC0031C2B5DF1006B44E0 /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		FA1787311C18177B00DC9520 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		FA356BD71C2913D500235470 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		FA356BD91C2914CA00235470 /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		FA44483E1C167D580033A70A /* NavMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavMenuViewCell.swift; sourceTree = "<group>"; };
 		FA4448401C169AC60033A70A /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		FA6221E61C113D55002A9950 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +106,16 @@
 		FA44483D1C167D3C0033A70A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FA0DBFFD1C2B5A70006B44E0 /* IOParallaxHeader.swift */,
+				FA0DBFFE1C2B5A70006B44E0 /* IOParallaxHeader.xib */,
 				FA44483E1C167D580033A70A /* NavMenuViewCell.swift */,
+				FA356BD91C2914CA00235470 /* ApiKeys.swift */,
+				FA0DBFF31C2B5794006B44E0 /* IOGrowHeader.swift */,
+				FA0DBFF71C2B5825006B44E0 /* IOGrowHeader.xib */,
+				FA0DBFF91C2B5897006B44E0 /* IOCell.swift */,
+				FA0DBFFB1C2B58A1006B44E0 /* IOSectionHeader.swift */,
+				FA0DC0011C2B5DB2006B44E0 /* MeetingCell.swift */,
+				FA0DC0031C2B5DF1006B44E0 /* HistoryCell.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -147,6 +176,7 @@
 				FAE597EA1C100E1E0076062A /* MainScreenController.swift */,
 				FA1787311C18177B00DC9520 /* CardViewController.swift */,
 				FA043BF11C1A6F8500BFB170 /* HistoryViewController.swift */,
+				FA356BD71C2913D500235470 /* ApiKeys.plist */,
 			);
 			path = FightTactix;
 			sourceTree = "<group>";
@@ -221,7 +251,10 @@
 				FAEC24C11C0E78ED0062CD2D /* LaunchScreen.storyboard in Resources */,
 				FAEC24BE1C0E78ED0062CD2D /* Assets.xcassets in Resources */,
 				FAEC24C91C0E79030062CD2D /* Podfile in Resources */,
+				FA0DBFF81C2B5825006B44E0 /* IOGrowHeader.xib in Resources */,
 				FAEC24BC1C0E78ED0062CD2D /* Main.storyboard in Resources */,
+				FA0DC0001C2B5A70006B44E0 /* IOParallaxHeader.xib in Resources */,
+				FA356BD81C2913D500235470 /* ApiKeys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +319,21 @@
 				FA043BF21C1A6F8500BFB170 /* HistoryViewController.swift in Sources */,
 				FA043BF61C1A8AC000BFB170 /* CurrentAttendanceModel.swift in Sources */,
 				FA44483F1C167D580033A70A /* NavMenuViewCell.swift in Sources */,
+				FA0DBFFF1C2B5A70006B44E0 /* IOParallaxHeader.swift in Sources */,
 				FA043BF41C1A853D00BFB170 /* CloudCalls.swift in Sources */,
 				FA77E3671C1258F0006D237D /* CardsModel.swift in Sources */,
+				FA0DC0021C2B5DB2006B44E0 /* MeetingCell.swift in Sources */,
 				FAEC24B91C0E78ED0062CD2D /* ViewController.swift in Sources */,
+				FA0DBFFA1C2B5897006B44E0 /* IOCell.swift in Sources */,
 				FAEC24B71C0E78ED0062CD2D /* AppDelegate.swift in Sources */,
 				FA6221EB1C1143DF002A9950 /* CloudQueries.swift in Sources */,
+				FA0DBFFC1C2B58A1006B44E0 /* IOSectionHeader.swift in Sources */,
+				FA0DC0041C2B5DF1006B44E0 /* HistoryCell.swift in Sources */,
 				FA1787321C18177B00DC9520 /* CardViewController.swift in Sources */,
 				FA4448411C169AC60033A70A /* InfoViewController.swift in Sources */,
+				FA0DBFF41C2B5794006B44E0 /* IOGrowHeader.swift in Sources */,
 				FA6221EE1C1156AA002A9950 /* MeetingModel.swift in Sources */,
+				FA356BDA1C2914CA00235470 /* ApiKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

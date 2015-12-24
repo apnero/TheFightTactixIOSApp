@@ -26,9 +26,7 @@ class MainScreenController: UIViewController {
                
         textChris.addTarget(self, action: "text:", forControlEvents: .TouchUpInside)
         purchaseCard.addTarget(self, action: "purchase:", forControlEvents: .TouchUpInside)
-        
-
-        
+               
     
     }
     

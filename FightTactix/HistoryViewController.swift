@@ -10,7 +10,7 @@ import UIKit
 import SwiftMoment
 import Parse
 
-class HistoryCell : UITableViewCell {
+class HistoryCell2 : UITableViewCell {
     
     
     @IBOutlet weak var date: UILabel!
@@ -60,7 +60,7 @@ class HistoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! HistoryCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! HistoryCell2
         
         cell.set(indexPath.row)
         

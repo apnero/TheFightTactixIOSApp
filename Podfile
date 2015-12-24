@@ -11,4 +11,6 @@ pod 'FBSDKLoginKit'
 pod 'SwiftMoment'
 pod 'EZLoadingActivity'
 pod 'SwiftyJSON'
+pod 'IOStickyHeader'
+
 end
