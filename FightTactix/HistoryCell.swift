@@ -33,6 +33,7 @@ class HistoryCell : UICollectionViewCell {
         }
         else {
             status?.text = "Registered"
+            status?.backgroundColor = UIColor.blueColor()
         }
     }
     

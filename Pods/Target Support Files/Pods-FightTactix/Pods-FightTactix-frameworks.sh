@@ -85,11 +85,14 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FightTactix/Bolts.framework"
+  install_framework "Pods-FightTactix/DZNEmptyDataSet.framework"
   install_framework "Pods-FightTactix/EZLoadingActivity.framework"
   install_framework "Pods-FightTactix/FBSDKCoreKit.framework"
   install_framework "Pods-FightTactix/FBSDKLoginKit.framework"
-  install_framework "Pods-FightTactix/GradientView.framework"
+  install_framework "Pods-FightTactix/FoldingTabBar.framework"
   install_framework "Pods-FightTactix/IOStickyHeader.framework"
+  install_framework "Pods-FightTactix/LNRSimpleNotifications.framework"
+  install_framework "Pods-FightTactix/LTMorphingLabel.framework"
   install_framework "Pods-FightTactix/Parse.framework"
   install_framework "Pods-FightTactix/ParseFacebookUtilsV4.framework"
   install_framework "Pods-FightTactix/ParseUI.framework"
@@ -98,11 +101,14 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FightTactix/Bolts.framework"
+  install_framework "Pods-FightTactix/DZNEmptyDataSet.framework"
   install_framework "Pods-FightTactix/EZLoadingActivity.framework"
   install_framework "Pods-FightTactix/FBSDKCoreKit.framework"
   install_framework "Pods-FightTactix/FBSDKLoginKit.framework"
-  install_framework "Pods-FightTactix/GradientView.framework"
+  install_framework "Pods-FightTactix/FoldingTabBar.framework"
   install_framework "Pods-FightTactix/IOStickyHeader.framework"
+  install_framework "Pods-FightTactix/LNRSimpleNotifications.framework"
+  install_framework "Pods-FightTactix/LTMorphingLabel.framework"
   install_framework "Pods-FightTactix/Parse.framework"
   install_framework "Pods-FightTactix/ParseFacebookUtilsV4.framework"
   install_framework "Pods-FightTactix/ParseUI.framework"

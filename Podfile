@@ -12,5 +12,9 @@ pod 'SwiftMoment'
 pod 'EZLoadingActivity'
 pod 'SwiftyJSON'
 pod 'IOStickyHeader'
+pod 'FoldingTabBar'
+pod 'DZNEmptyDataSet'
+pod 'LNRSimpleNotifications'
+pod 'LTMorphingLabel'
 
 end

@@ -11,6 +11,7 @@ import UIKit
 import ParseUI
 import ParseFacebookUtilsV4
 import SwiftyJSON
+import EZLoadingActivity
 
 class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
@@ -118,12 +119,30 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     func presentMainMenu() {
         
         
-        //if PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()!) && PFUser.currentUser()?.objectForKey("profile") == nil {
+        EZLoadingActivity.show("Loading...", disableUI: true)
+        
+        
+        CloudQueries.currentSchedule(self)
+        CloudQueries.userClassHistory(self)
+        CloudQueries.userPunchCards(self)
+        CloudQueries.notifications(self)
+        
+        
+        if PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()!) && PFUser.currentUser()?.objectForKey("profile") == nil {
             makeGraphRequest()
-        //}
+        }
+        
+        
+    }
+    
+    func loaded() {
+        EZLoadingActivity.hide(success: true, animated: true)
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
         let destViewController : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainViewController")
         self.presentViewController(destViewController, animated: true, completion: nil)
+        
+        
+        
     }
 }

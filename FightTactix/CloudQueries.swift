@@ -17,10 +17,12 @@ class CloudQueries {
     static var vuserPunchCards = [Cards]()
     static var vmaxClassSize = 99
     static var vcurrentEnrolled = [CurrentAttendance]()
-    static var loading = 3
+    static var loading = 4
+    static var vNotifications = [Notifications]()
     
     
-    static func currentSchedule(controller: MainScreenController) {
+    
+    static func currentSchedule(controller: ViewController) {
         
         maxClassSize()
         
@@ -85,7 +87,7 @@ class CloudQueries {
         }
     }
     
-    static func userClassHistory(controller: MainScreenController) {
+    static func userClassHistory(controller: ViewController) {
         
         let params = [String: String]()
         
@@ -106,7 +108,7 @@ class CloudQueries {
         }
     }
     
-    static func userPunchCards(controller: MainScreenController) {
+    static func userPunchCards(controller: ViewController) {
         
         let params = [String: String]()
         
@@ -128,4 +130,26 @@ class CloudQueries {
         }
     }
     
+    
+    static func notifications(controller: ViewController) {
+        
+        let params = [String: String]()
+        
+        PFCloud.callFunctionInBackground("notifications", withParameters: params) {
+            result, error in
+            if ( error === nil) {
+            
+                self.vNotifications = result as! [Notifications]
+                loading -= 1
+                
+                if loading == 0 {
+                    controller.loaded()
+                }
+                
+            }
+            else if (error != nil) {
+                NSLog("notifications error")
+            }
+        }
+    }
 }

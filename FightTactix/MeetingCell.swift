@@ -7,15 +7,20 @@
 //
 
 import SwiftMoment
+import LTMorphingLabel
+
 
 class MeetingCell : UICollectionViewCell {
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var status: LTMorphingLabel!
     
     
     func set(row: Int) {
+  
+        
+        
         let meeting = CloudQueries.vcurrentSchedule[row]
         
         let classDate = meeting.date!
@@ -44,6 +49,8 @@ class MeetingCell : UICollectionViewCell {
         }
         
         
+        status.morphingEffect = LTMorphingEffect.Pixelate
+        
         if checkedin {
             status?.text = "Checked-In"
             status?.textColor = UIColor.magentaColor()
@@ -59,7 +66,10 @@ class MeetingCell : UICollectionViewCell {
             status?.textColor = UIColor.redColor()
         } else if (meeting.open!) {
             status?.text = "Register"
-        } else { status?.text = "Registration Closed"}
+            status?.textColor = UIColor.blackColor()
+        } else { status?.text = "Registration Closed"
+            status?.textColor = UIColor.grayColor()
+        }
         
         
     }

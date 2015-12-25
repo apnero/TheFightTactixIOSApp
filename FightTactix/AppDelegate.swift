@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Meeting.registerSubclass()
         Attendance.registerSubclass()
         Cards.registerSubclass()
-
+        Notifications.registerSubclass()
         
         return true
     }

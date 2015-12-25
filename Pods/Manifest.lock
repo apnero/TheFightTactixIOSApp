@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.5.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.5.0)
+  - DZNEmptyDataSet (1.7.3)
   - EZLoadingActivity (0.4)
   - FBSDKCoreKit (4.8.0):
     - Bolts (~> 1.1)
@@ -17,8 +18,10 @@ PODS:
     - FBSDKCoreKit/arc
   - FBSDKLoginKit (4.8.0):
     - FBSDKCoreKit
-  - GradientView (2.1.0)
+  - FoldingTabBar (1.0.2)
   - IOStickyHeader (0.3.0)
+  - LNRSimpleNotifications (0.2.3)
+  - LTMorphingLabel (0.1.1)
   - Parse (1.10.0):
     - Bolts/Tasks (~> 1.5)
   - ParseFacebookUtilsV4 (1.9.1):
@@ -33,11 +36,14 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - EZLoadingActivity
   - FBSDKCoreKit
   - FBSDKLoginKit
-  - GradientView
+  - FoldingTabBar
   - IOStickyHeader
+  - LNRSimpleNotifications
+  - LTMorphingLabel
   - Parse
   - ParseFacebookUtilsV4
   - ParseUI
@@ -46,11 +52,14 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   EZLoadingActivity: d6fe822f4b295349dd44e6e5d7f22d7c1a2b13cc
   FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
-  GradientView: 4a961b8e9e1787beaf6880b9fc2dd08c6345533d
+  FoldingTabBar: 79df76dfd5a84c0a369beaa378a31c07aa53b6b2
   IOStickyHeader: 4550b071f8f3df73a361a3152aab8e5a3bae1ea8
+  LNRSimpleNotifications: aed75eb6b1f1bda28d9fba2cef5a86bdbf3c1619
+  LTMorphingLabel: dfc40f43a0dcf81867b1f29431f34e861a5f1b35
   Parse: 90b2544822200f84b18bfacc4e8b0a3a6c3584a2
   ParseFacebookUtilsV4: eab9b4ade12f0800b4d30f6b808bca55ce17a0e9
   ParseUI: c2bcdfbb00330e464b5b773266ae221697a3bb7b
