@@ -54,26 +54,26 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         self.dismissViewControllerAnimated(true, completion: nil)
         
         let name = signUpController.signUpView?.additionalField?.text
-        let nameForChannel = name!.componentsSeparatedByString(" ").joinWithSeparator("")
+//        let nameForChannel = name!.componentsSeparatedByString(" ").joinWithSeparator("")
         
         PFUser.currentUser()?.setObject(name!, forKey: "name")
         PFUser.currentUser()?.saveInBackground()
  
-        
-        if PFInstallation.currentInstallation().deviceToken != nil {
-        
-            let subscribedChannels:Array<String>? = PFInstallation.currentInstallation().channels
-            if subscribedChannels == nil {
-                PFPush.subscribeToChannelInBackground("All")
-                if name != nil {
-                    PFPush.subscribeToChannelInBackground(nameForChannel)
-                }
-            } else if !subscribedChannels!.contains("All") {
-                PFPush.subscribeToChannelInBackground("All")
-            } else if name != nil && !subscribedChannels!.contains(nameForChannel) {
-                PFPush.subscribeToChannelInBackground(nameForChannel)
-            }
-        }
+//        
+//        if PFInstallation.currentInstallation().deviceToken != nil {
+//        
+//            let subscribedChannels:Array<String>? = PFInstallation.currentInstallation().channels
+//            if subscribedChannels == nil {
+//                PFPush.subscribeToChannelInBackground("All")
+//                if name != nil {
+//                    PFPush.subscribeToChannelInBackground(nameForChannel)
+//                }
+//            } else if !subscribedChannels!.contains("All") {
+//                PFPush.subscribeToChannelInBackground("All")
+//            } else if name != nil && !subscribedChannels!.contains(nameForChannel) {
+//                PFPush.subscribeToChannelInBackground(nameForChannel)
+//            }
+//        }
 
         
         presentMainMenu()
@@ -122,15 +122,33 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         EZLoadingActivity.show("Loading...", disableUI: true)
         
         
+        if PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()!) && PFUser.currentUser()?.objectForKey("profile") == nil {
+            makeGraphRequest()
+        }
+        
+        let nameForChannel = PFUser.currentUser()?.valueForKey("name")?.componentsSeparatedByString(" ").joinWithSeparator("")
+        
+        if PFInstallation.currentInstallation().deviceToken != nil {
+            
+            let subscribedChannels:Array<String>? = PFInstallation.currentInstallation().channels
+            if subscribedChannels == nil {
+                PFPush.subscribeToChannelInBackground("All")
+                if nameForChannel != nil {
+                    PFPush.subscribeToChannelInBackground(nameForChannel!)
+                }
+            } else if !subscribedChannels!.contains("All") {
+                PFPush.subscribeToChannelInBackground("All")
+            } else if nameForChannel != nil && !subscribedChannels!.contains(nameForChannel!) {
+                PFPush.subscribeToChannelInBackground(nameForChannel!)
+            }
+        }
+        
+        print (nameForChannel)
+        
         CloudQueries.currentSchedule(self)
         CloudQueries.userClassHistory(self)
         CloudQueries.userPunchCards(self)
         CloudQueries.notifications(self)
-        
-        
-        if PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()!) && PFUser.currentUser()?.objectForKey("profile") == nil {
-            makeGraphRequest()
-        }
         
         
     }

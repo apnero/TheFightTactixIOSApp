@@ -29,6 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Cards.registerSubclass()
         Notifications.registerSubclass()
         
+        let types: UIUserNotificationType = [ UIUserNotificationType.Badge, UIUserNotificationType.Alert, UIUserNotificationType.Sound]
+        
+        let settings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+        
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        
         return true
     }
     
@@ -47,12 +54,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         currentInstallation.setDeviceTokenFromData(deviceToken)
         currentInstallation.saveInBackgroundWithBlock { (succeeded, e) -> Void in
-            //code
+            if (e == nil){
+                print ("installation saved with token")
+            }
+            else {print ("installation saving with token failed")}
         }
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         print("failed to register for remote notifications:  (error)")
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.saveInBackgroundWithBlock { (succeeded, e) -> Void in
+            if (e == nil){
+                print ("installation saved")
+            }
+            else {print ("installation saving failed")}
+        }
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {

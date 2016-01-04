@@ -31,9 +31,15 @@ class MessageViewController: UIViewController, UICollectionViewDataSource, UICol
             sum += card.credits!
         }
         
-        let remaining = sum - CloudQueries.vuserClassHistory.count
+        var attendanceSum = 0
+        for attendance in CloudQueries.vuserClassHistory {
+            if attendance.checkedin == true {
+                attendanceSum++
+            }
+        }
+        let remaining = sum - attendanceSum
         
-        classesAttended.text = "\(CloudQueries.vuserClassHistory.count)"
+        classesAttended.text = "\(attendanceSum)"
         creditsPurchased.text = "\(sum)"
         creditsRemaining.text = "\(remaining)"
         

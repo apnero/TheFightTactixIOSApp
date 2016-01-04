@@ -406,7 +406,7 @@
                   moduleName = "FightTactix"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/IOParallaxHeader.swift"
-                  timestampString = "472700975.753551"
+                  timestampString = "473554697.445764"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -421,7 +421,7 @@
                   moduleName = "FightTactix"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/IOParallaxHeader.swift"
-                  timestampString = "472700975.753814"
+                  timestampString = "473554697.44591"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -436,7 +436,7 @@
                   moduleName = "FightTactix"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/IOParallaxHeader.swift"
-                  timestampString = "472700975.753961"
+                  timestampString = "473554697.446036"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -453,11 +453,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/ScheduleViewController.swift"
-            timestampString = "472715141.559017"
+            timestampString = "473555510.527609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "collectionView(_:didSelectItemAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -485,11 +485,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/ScheduleViewController.swift"
-            timestampString = "472715141.559017"
+            timestampString = "473555510.527609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "collectionView(_:didSelectItemAtIndexPath:)"
             landmarkType = "5">
             <Locations>
@@ -549,11 +549,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/MessageViewController.swift"
-            timestampString = "472715141.559017"
+            timestampString = "473556049.992455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -572,6 +572,54 @@
             endingLineNumber = "11"
             landmarkName = "CardCell"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FightTactix/AppDelegate.swift"
+            timestampString = "473537781.46233"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "application(_:didFailToRegisterForRemoteNotificationsWithError:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FightTactix.AppDelegate.application (FightTactix.AppDelegate)(__ObjC.UIApplication, didFailToRegisterForRemoteNotificationsWithError : __ObjC.NSError) -&gt; ()"
+                  moduleName = "FightTactix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/AppDelegate.swift"
+                  timestampString = "473539282.207401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "271">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FightTactix.AppDelegate.(application (FightTactix.AppDelegate) -&gt; (__ObjC.UIApplication, didFailToRegisterForRemoteNotificationsWithError : __ObjC.NSError) -&gt; ()).(closure #1)"
+                  moduleName = "FightTactix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/AppDelegate.swift"
+                  timestampString = "473539282.20766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
