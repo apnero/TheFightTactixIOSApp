@@ -230,7 +230,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationController.h"
@@ -292,7 +292,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/CurrentAttendanceModel.swift"
@@ -356,7 +356,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/ViewController.swift"
@@ -388,7 +388,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FightTactix/IOParallaxHeader.swift"
@@ -399,49 +399,49 @@
             endingLineNumber = "6">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "FightTactix.IOParallaxHeader.__deallocating_deinit"
                   moduleName = "FightTactix"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/IOParallaxHeader.swift"
-                  timestampString = "473554697.445764"
+                  timestampString = "473738657.785939"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "19">
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "FightTactix.IOParallaxHeader.init (FightTactix.IOParallaxHeader.Type)(frame : __C.CGRect) -&gt; FightTactix.IOParallaxHeader"
                   moduleName = "FightTactix"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/IOParallaxHeader.swift"
-                  timestampString = "473554697.44591"
+                  timestampString = "473738657.786394"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "62">
+                  offsetFromSymbolStart = "54">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "FightTactix.IOParallaxHeader.init (FightTactix.IOParallaxHeader.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;FightTactix.IOParallaxHeader&gt;"
                   moduleName = "FightTactix"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewnero/Documents/myprojects/FightTactix/FightTactix/IOParallaxHeader.swift"
-                  timestampString = "473554697.446036"
+                  timestampString = "473738657.786785"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "27">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>

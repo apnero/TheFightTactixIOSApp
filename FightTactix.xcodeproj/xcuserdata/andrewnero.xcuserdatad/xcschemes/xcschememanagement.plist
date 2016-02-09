@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FightTactixUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>FAE986041C3C6D800063D3C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>FAEC24B21C0E78ED0062CD2D</key>
 		<dict>
 			<key>primary</key>

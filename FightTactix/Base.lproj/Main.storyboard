@@ -172,9 +172,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KC-ox-wro" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                                            <rect key="frame" x="373" y="12" width="100" height="17"/>
+                                                            <rect key="frame" x="348" y="12" width="125" height="17"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="2Fz-kH-iCD"/>
+                                                                <constraint firstAttribute="width" constant="125" id="2Fz-kH-iCD"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="highlightedColor"/>

@@ -33,6 +33,8 @@
 		FA77E3651C122A8A006D237D /* AttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77E3641C122A8A006D237D /* AttendanceModel.swift */; };
 		FA77E3671C1258F0006D237D /* CardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77E3661C1258F0006D237D /* CardsModel.swift */; };
 		FAD5F4331C2C9C7A00EBF6DD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5F4321C2C9C7A00EBF6DD /* CardView.swift */; };
+		FAE986081C3C6D800063D3C3 /* FightTactixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE986071C3C6D800063D3C3 /* FightTactixUITests.swift */; };
+		FAE986121C3C77020063D3C3 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE986111C3C77020063D3C3 /* SnapshotHelper.swift */; };
 		FAEC24B71C0E78ED0062CD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC24B61C0E78ED0062CD2D /* AppDelegate.swift */; };
 		FAEC24B91C0E78ED0062CD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC24B81C0E78ED0062CD2D /* ViewController.swift */; };
 		FAEC24BC1C0E78ED0062CD2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC24BA1C0E78ED0062CD2D /* Main.storyboard */; };
@@ -40,6 +42,16 @@
 		FAEC24C11C0E78ED0062CD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC24BF1C0E78ED0062CD2D /* LaunchScreen.storyboard */; };
 		FAEC24C91C0E79030062CD2D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FAEC24C81C0E79030062CD2D /* Podfile */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAAA14191C3CBA42003ACA50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAEC24AB1C0E78ED0062CD2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAEC24B21C0E78ED0062CD2D;
+			remoteInfo = FightTactix;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5949E001C0AFB0C9312BA148 /* Pods-FightTactix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightTactix.release.xcconfig"; path = "Pods/Target Support Files/Pods-FightTactix/Pods-FightTactix.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +82,10 @@
 		FA77E3641C122A8A006D237D /* AttendanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceModel.swift; sourceTree = "<group>"; };
 		FA77E3661C1258F0006D237D /* CardsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsModel.swift; sourceTree = "<group>"; };
 		FAD5F4321C2C9C7A00EBF6DD /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FAE986051C3C6D800063D3C3 /* FightTactixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightTactixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE986071C3C6D800063D3C3 /* FightTactixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightTactixUITests.swift; sourceTree = "<group>"; };
+		FAE986091C3C6D800063D3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE986111C3C77020063D3C3 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		FAEC24B31C0E78ED0062CD2D /* FightTactix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightTactix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC24B61C0E78ED0062CD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEC24B81C0E78ED0062CD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FAE986021C3C6D800063D3C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAEC24B01C0E78ED0062CD2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,11 +171,22 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		FAE986061C3C6D800063D3C3 /* FightTactixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAE986111C3C77020063D3C3 /* SnapshotHelper.swift */,
+				FAE986071C3C6D800063D3C3 /* FightTactixUITests.swift */,
+				FAE986091C3C6D800063D3C3 /* Info.plist */,
+			);
+			path = FightTactixUITests;
+			sourceTree = "<group>";
+		};
 		FAEC24AA1C0E78ED0062CD2D = {
 			isa = PBXGroup;
 			children = (
 				FAEC24C81C0E79030062CD2D /* Podfile */,
 				FAEC24B51C0E78ED0062CD2D /* FightTactix */,
+				FAE986061C3C6D800063D3C3 /* FightTactixUITests */,
 				FAEC24B41C0E78ED0062CD2D /* Products */,
 				68AC8C91CF2F4B664A2140FA /* Pods */,
 				EFDFD4613A6FA54673B835CD /* Frameworks */,
@@ -163,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEC24B31C0E78ED0062CD2D /* FightTactix.app */,
+				FAE986051C3C6D800063D3C3 /* FightTactixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +228,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FAE986041C3C6D800063D3C3 /* FightTactixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE9860C1C3C6D800063D3C3 /* Build configuration list for PBXNativeTarget "FightTactixUITests" */;
+			buildPhases = (
+				FAE986011C3C6D800063D3C3 /* Sources */,
+				FAE986021C3C6D800063D3C3 /* Frameworks */,
+				FAE986031C3C6D800063D3C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAA141A1C3CBA42003ACA50 /* PBXTargetDependency */,
+			);
+			name = FightTactixUITests;
+			productName = FightTactixUITests;
+			productReference = FAE986051C3C6D800063D3C3 /* FightTactixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FAEC24B21C0E78ED0062CD2D /* FightTactix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEC24C51C0E78ED0062CD2D /* Build configuration list for PBXNativeTarget "FightTactix" */;
@@ -219,10 +272,14 @@
 		FAEC24AB1C0E78ED0062CD2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Andrew Nero";
 				TargetAttributes = {
+					FAE986041C3C6D800063D3C3 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FAEC24B21C0E78ED0062CD2D;
+					};
 					FAEC24B21C0E78ED0062CD2D = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = F8WV43V82N;
@@ -248,11 +305,19 @@
 			projectRoot = "";
 			targets = (
 				FAEC24B21C0E78ED0062CD2D /* FightTactix */,
+				FAE986041C3C6D800063D3C3 /* FightTactixUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FAE986031C3C6D800063D3C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAEC24B11C0E78ED0062CD2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +382,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FAE986011C3C6D800063D3C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE986081C3C6D800063D3C3 /* FightTactixUITests.swift in Sources */,
+				FAE986121C3C77020063D3C3 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAEC24AF1C0E78ED0062CD2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +425,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FAAA141A1C3CBA42003ACA50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAEC24B21C0E78ED0062CD2D /* FightTactix */;
+			targetProxy = FAAA14191C3CBA42003ACA50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FAEC24BA1C0E78ED0062CD2D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -371,6 +453,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FAE9860D1C3C6D800063D3C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C26D0C3A9A3EC09557DF67 /* Pods-FightTactix.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = FightTactixUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FightTactixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = FightTactix;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FAE9860E1C3C6D800063D3C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C26D0C3A9A3EC09557DF67 /* Pods-FightTactix.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = FightTactixUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FightTactixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = FightTactix;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		FAEC24C31C0E78ED0062CD2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -496,6 +608,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FAE9860C1C3C6D800063D3C3 /* Build configuration list for PBXNativeTarget "FightTactixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE9860D1C3C6D800063D3C3 /* Debug */,
+				FAE9860E1C3C6D800063D3C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAEC24AE1C0E78ED0062CD2D /* Build configuration list for PBXProject "FightTactix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

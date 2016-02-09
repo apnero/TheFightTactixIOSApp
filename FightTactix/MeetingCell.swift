@@ -55,8 +55,8 @@ class MeetingCell : UICollectionViewCell {
             status?.text = "Checked-In"
             status?.textColor = UIColor.magentaColor()
         } else if registered {
-            if (moment() + 4.hours > moment(classDate) ) {
-                status?.text = "Registered (< 4 hours)"
+            if (moment() + 1.hours > moment(classDate) ) {
+                status?.text = "Registered(<1 hour)"
                 status?.textColor = UIColor.blueColor()
             } else {
                 status?.text = "Registered"
