@@ -147,42 +147,51 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Bnm-w1-R7N" customClass="IOStickyHeaderFlowLayout" customModule="IOStickyHeader">
-                                    <size key="itemSize" width="496" height="50"/>
+                                    <size key="itemSize" width="496" height="71"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="2dY-u5-d3U" customClass="MeetingCell" customModule="FightTactix" customModuleProvider="target">
-                                        <rect key="frame" x="52" y="50" width="496" height="50"/>
+                                        <rect key="frame" x="52" y="50" width="496" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="496" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="496" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79k-hn-hAt" userLabel="CellCardView" customClass="CardView" customModule="FightTactix" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="9" width="476" height="40"/>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79k-hn-hAt" userLabel="CellCardView" customClass="CardView" customModule="FightTactix" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="8" width="476" height="63"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wht-Iy-vrm">
-                                                            <rect key="frame" x="5" y="1" width="200" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wht-Iy-vrm">
+                                                            <rect key="frame" x="5" y="1" width="200" height="18"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="200" id="LG0-ZR-fjt"/>
+                                                                <constraint firstAttribute="width" constant="130" id="LG0-ZR-fjt"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KC-ox-wro" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                                            <rect key="frame" x="348" y="12" width="125" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KC-ox-wro" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                                            <rect key="frame" x="351" y="23" width="125" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="125" id="2Fz-kH-iCD"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J96-rg-Pzg">
-                                                            <rect key="frame" x="5" y="23" width="200" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J96-rg-Pzg">
+                                                            <rect key="frame" x="5" y="15" width="200" height="17"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="200" id="4gF-UZ-ULx"/>
+                                                                <constraint firstAttribute="width" constant="160" id="4gF-UZ-ULx"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yE-jN-h2Q">
+                                                            <rect key="frame" x="121" y="0.0" width="93" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="jZz-yT-69d"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,6 +220,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="date" destination="wht-Iy-vrm" id="Yue-to-hco"/>
+                                            <outlet property="location" destination="3yE-jN-h2Q" id="Q6d-iN-oo2"/>
                                             <outlet property="status" destination="0KC-ox-wro" id="q71-08-DRi"/>
                                             <outlet property="time" destination="J96-rg-Pzg" id="toV-Vu-C4O"/>
                                         </connections>
@@ -620,6 +630,15 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixy-rC-Z88">
+                                                            <rect key="frame" x="127" y="1" width="93" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="gHG-Zq-ufu"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -643,6 +662,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="date" destination="dwd-xi-vUf" id="8K3-Ox-g3b"/>
+                                            <outlet property="location" destination="ixy-rC-Z88" id="ZIv-cE-AnZ"/>
                                             <outlet property="status" destination="89k-6C-4iW" id="iQU-9e-Rd5"/>
                                             <outlet property="time" destination="wdl-qf-Lhp" id="p9T-OF-he4"/>
                                         </connections>

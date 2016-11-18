@@ -11,11 +11,11 @@ import FoldingTabBar
 
 class FoldingTabBarController: YALFoldingTabBarController, YALTabBarInteracting {
 
-    let tabItem1: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "wall clock-3"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "hand132"))
-    let tabItem2: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "social11"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "hand132"))
+    let tabItem1: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "wall clock-3"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "sms1"))
+    let tabItem2: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "social11"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "sms1"))
     
-    let tabItem3: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "professor8"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "hand132"))
-    let tabItem4: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "credit card3"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "hand132"))
+    let tabItem3: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "professor8"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "sms1"))
+    let tabItem4: YALTabBarItem = YALTabBarItem(itemImage: UIImage(named: "credit card3"), leftItemImage:UIImage(named: "sms1"), rightItemImage:UIImage(named: "sms1"))
     
     override func viewDidLoad() {
         super.viewDidLoad()

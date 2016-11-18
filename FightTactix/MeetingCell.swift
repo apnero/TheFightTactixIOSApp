@@ -15,6 +15,7 @@ class MeetingCell : UICollectionViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var status: LTMorphingLabel!
+    @IBOutlet weak var location: UILabel!
     
     
     func set(row: Int) {
@@ -27,6 +28,7 @@ class MeetingCell : UICollectionViewCell {
         let endTime = moment(classDate) + 2.hours
         date.text = moment(classDate).format("EEE, MMM d")
         time.text = moment(classDate).format("hh:mm aaa") + "-" + endTime.format("hh:mm aaa")
+        location.text = meeting.location!
         
         var soldOut = false
         var registered = false

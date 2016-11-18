@@ -172,7 +172,8 @@ class ScheduleViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func extraRightItemDidPress() {
         //print("right pressed")
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://kravmagact.sites.zenplanner.com/sign-up-now.cfm")!)
+  //      UIApplication.sharedApplication().openURL(NSURL(string: "https://kravmagact.sites.zenplanner.com/sign-up-now.cfm")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "sms://2035454694")!)  
         
     }
     

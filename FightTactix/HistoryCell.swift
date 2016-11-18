@@ -13,6 +13,7 @@ class HistoryCell : UICollectionViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var location: UILabel!
     
     func set(row: Int) {
         let attendance = CloudQueries.vuserClassHistory[row]
@@ -21,7 +22,7 @@ class HistoryCell : UICollectionViewCell {
         let endTime = moment(classDate) + 2.hours
         date.text = moment(classDate).format("EEE, MMM d")
         time.text = moment(classDate).format("hh:mm aaa") + "-" + endTime.format("hh:mm aaa")
-        
+        location.text = attendance.location!
         
         if moment(attendance.date!) < moment() {
             status?.text = "Complete"
